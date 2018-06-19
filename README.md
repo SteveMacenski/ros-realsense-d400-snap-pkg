@@ -13,7 +13,7 @@ The snap can be found [here]().
 Install via:
 
 ```
-sudo apt-get update && install snapcraft && snap install ros-realsense-d400
+sudo apt-get update && install snapcraft && snap install ros-realsense-d400 --devmode --edge
 ```
 
 You can then run it in the isolated container using 
