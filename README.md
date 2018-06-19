@@ -21,3 +21,9 @@ You can then run it in the isolated container using
 ```
 ros-realsense-d400
 ```
+
+## Motive
+
+The install process for librealsense and ros realsense wrappers alike frustrates me without end. Inconsistent with different machines or what you had for lunch or if Mercury is in retrograde. As a result, I'm going to do it ONCE per 0.x.0 releases of the ROS wrapper with the stable supported librealsense. 
+
+I can only imagine the other poor souls in agony with me so I decided to just publish it publicly and support for whoever stumbles onto this. If you want additional features or configs, feel free to PR, as long as it compiles I'll add it to future releases. Examples that someone might care about: specifying camera number with [hooks](https://docs.snapcraft.io/build-snaps/hooks), other launch files, other config files. 
