@@ -9,7 +9,7 @@ confinement: devmode
 type: app
 
 apps:
-  ROS-Realsense-D400:
+  ros-realsense-d400:
     command: roslaunch realsense2_camera rs_camera.launch
     plugs: [network, network-bind, raw-usb]
 
@@ -25,7 +25,3 @@ parts:
     rosdistro: kinetic
     catkin-ros-master-uri: http://localhost:11311
     catkin-packages: [librealsense2, realsense2_camera]
-
-# Notes
-# I changed the package.xml/CMakeLists.txt in realsense ros wrapper to make librealsense2 -> librealsense
-# I had clone matching version into the workspace
