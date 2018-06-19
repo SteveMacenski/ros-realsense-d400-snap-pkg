@@ -1,0 +1,31 @@
+name: ros-realsense-d400
+version: '0.0.1'
+summary: Realsense Camera D400 modified ros driver and realsense SDK Snap.
+description: |
+  A snap package for modified realsense ros drivers packaged as an isolated snap mainly based on ros wrapper v2.0.3 and librealsense 2.10.3.
+grade: stable
+confinement: devmode
+
+type: app
+
+apps:
+  ROS-Realsense-D400:
+    command: roslaunch realsense2_camera rs_camera.launch
+    plugs: [network, network-bind, raw-usb]
+
+  roscore:
+    command: roscore
+    plugs: [network, network-bind]
+
+parts:
+  workspace:
+    plugin: catkin
+    source-space: src
+    include-roscore: true
+    rosdistro: kinetic
+    catkin-ros-master-uri: http://localhost:11311
+    catkin-packages: [librealsense2, realsense2_camera]
+
+# Notes
+# I changed the package.xml/CMakeLists.txt in realsense ros wrapper to make librealsense2 -> librealsense
+# I had clone matching version into the workspace
