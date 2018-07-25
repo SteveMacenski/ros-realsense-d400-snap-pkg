@@ -23,7 +23,7 @@ If the values are not set, it will run the default `rs_camera.launch` file in th
 
 ```
 0 - default
-1 - 6 fps color/depth, no IR, downsampled to minimum 
+1 - 6 fps color/depth, no IR, downsampled to minimum (320x180/424x240)
 ```
 
 ## Motive

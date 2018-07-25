@@ -16,6 +16,7 @@ cd src
 # add all the necessary things to it
 git clone -b 2.0.3-stable https://github.com/SteveMacenski/realsense.git
 git clone -b v2.10.3 https://github.com/IntelRealSense/librealsense.git
+git clone -b master https://github.com/SteveMacenski/ros-realsense-d400-snap-pkg.git
 cd ../
 
 # move snap and hooks to right place
