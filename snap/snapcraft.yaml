@@ -1,5 +1,5 @@
 name: ros-realsense-d400
-version: '0.0.1'
+version: '0.0.3'
 summary: Realsense Camera D400 modified ros driver and realsense SDK Snap.
 description: |
   A snap package for modified realsense ros drivers packaged as an isolated snap mainly based on ros wrapper v2.0.3 and librealsense 2.10.3.
@@ -10,7 +10,7 @@ type: app
 
 apps:
   ros-realsense-d400:
-    command: roslaunch realsense2_camera rs_camera.launch
+    command: rosrun realsense2_camera rs_camera_snapcraft.sh # todo move into snapcraft package with profiles as well off of rs_camera
     plugs: [network, network-bind, raw-usb]
 
   roscore:
@@ -24,4 +24,26 @@ parts:
     include-roscore: true
     rosdistro: kinetic
     catkin-ros-master-uri: http://localhost:11311
-    catkin-packages: [librealsense2, realsense2_camera]
+    catkin-packages: [librealsense2, realsense2_camera] 
+
+
+# pull in from my repos and branches -- issues because librealsense not in a subdirectory + dependencies between parts
+# parts:
+#   realsense-ros-workspace:
+#     source: https://github.com/SteveMacenski/realsense.git
+#     source-branch: 2.0.3-stable
+#     plugin: catkin
+#     rosdistro: kinetic
+#     source-space: realsense2_camera/
+#     catkin-packages: [realsense2_camera]
+#     after: [librealsense-workspace]
+
+#   librealsense-workspace:
+#     source: https://github.com/IntelRealSense/librealsense.git
+#     source-branch: v2.10.3
+#     plugin: catkin
+#     rosdistro: kinetic
+#     source-space: librealsense
+#     catkin-packages: [librealsense2]
+#     override-pull: |
+#       mkdir librealsense && cd librealsense && git clone -b v2.10.3 https://github.com/IntelRealSense/librealsense.git
