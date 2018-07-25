@@ -13,11 +13,21 @@ sudo apt-get update && install snapcraft && snap install ros-realsense-d400 --de
 You can then run it in the isolated container using 
 
 ```
+snapctl set serialno=[serial] cameraid=[camera namespace] profile=[profile number]
 ros-realsense-d400
+```
+
+If the values are not set, it will run the default `rs_camera.launch` file in the default namespace (`camera`) with the default profile.
+
+## Supported Profiles
+
+```
+0 - default
+1 - 6 fps color/depth, no IR, downsampled to minimum 
 ```
 
 ## Motive
 
 The install process for librealsense and ros realsense wrappers alike frustrates me without end. Inconsistent with different machines or what you had for lunch or if Mercury is in retrograde. As a result, I'm going to do it ONCE per 0.x.0 releases of the ROS wrapper with the stable supported librealsense. 
 
-I can only imagine the other poor souls in agony with me so I decided to just publish it publicly and support for whoever stumbles onto this. If you want additional features or configs, feel free to PR, as long as it compiles I'll add it to future releases. Examples that someone might care about: specifying camera number with [hooks](https://docs.snapcraft.io/build-snaps/hooks), other launch files, other config files. 
+I can only imagine the other poor souls in agony with me so I decided to just publish it publicly and support for whoever stumbles onto this. If you want additional features or configs, feel free to PR, as long as it compiles I'll add it to future releases.
