@@ -13,11 +13,11 @@ sudo apt-get update && install snapcraft && snap install ros-realsense-d400 --de
 You can then run it in the isolated container using 
 
 ```
-snapctl set serialno=[serial] cameraid=[camera namespace] profile=[profile number]
+snap set ros-realsense-d400 serialno=[serial] cameraid=[camera namespace] profile=[profile number]
 ros-realsense-d400
 ```
 
-If the values are not set, it will run the default `rs_camera.launch` file in the default namespace (`camera`) with the default profile.
+If the values are not set or some are set, it will run the default `rs_camera.launch` file in the default namespace (`camera`) with the default profile for the unset parameters. 
 
 ## Supported Profiles
 
