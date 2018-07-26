@@ -1,4 +1,5 @@
-# Ubuntu Snaps of ROS Realsense and librealsense2 for the D4xx cameras
+# Ubuntu Snaps of ROS Realsense and librealsense2 for the D4xx cameras [![Build Status](https://travis-ci.org/stevemacenski/ros-realsense-d400-snap-pkg
+.png)](https://travis-ci.org/stevemacenski/ros-realsense-d400-snap-pkg)
 
 ## Snap store entry
 The snap can be found [here]().
