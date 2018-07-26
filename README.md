@@ -38,3 +38,4 @@ I can only imagine the other poor souls in agony with me so I decided to just pu
 - [ ] Increment up version in the `snapcraft.yaml` file
 - [ ] Verify after CI that the new version is on edge
 - [ ] If its determined to be a stable release, manually add to the stable track
+ 
