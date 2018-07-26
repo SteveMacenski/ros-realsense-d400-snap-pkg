@@ -12,10 +12,9 @@ deploy:
             "apt update -qq &&
              apt install snapcraft -y && 
              cd $(pwd) &&
-             ./generate_snap.sh [source]
+             ./generate_snap.sh
              if [ "${TRAVIS_PULL_REQUEST}" == "false" ] && [ "${TRAVIS_BRANCH}" == "master" ] ; then 
-               snapcraft push *.snap --release edge;
-             fi" 
-             # must call TODO find source and find what directory in to call this from
+               snapcraft push snap_ws/*.snap --release edge;
+             fi"
     on:
       branch: master
