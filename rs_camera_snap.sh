@@ -13,12 +13,3 @@ if [ $profile = 1 ]; then
 else
   roslaunch --wait realsense2_camera rs_camera.launch serial_no:=$serial_no camera:=$camera
 fi
-
-
-
-
-# login
-# snapcraft login stevenmacenski@gmail.com
-
-# push and release it 
-# snapcraft push --release edge [snap name].snap 

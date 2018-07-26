@@ -1,0 +1,6 @@
+
+# login
+# snapcraft login stevenmacenski@gmail.com
+
+# push and release it 
+# snapcraft push --release edge [snap name].snap 
