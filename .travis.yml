@@ -4,3 +4,5 @@ language: bash
 
 # push and release it 
 # snapcraft push --release edge [snap name].snap 
+
+#tes tentrys
