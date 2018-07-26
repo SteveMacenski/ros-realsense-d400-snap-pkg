@@ -25,3 +25,4 @@ parts:
     rosdistro: kinetic
     catkin-ros-master-uri: http://localhost:11311
     catkin-packages: [librealsense2, realsense2_camera, ros_realsense_d400_snap_pkg] 
+    build-packages: [libglfw3-dev, libusb-1.0-0, build-essential, libgtk-3-dev]
