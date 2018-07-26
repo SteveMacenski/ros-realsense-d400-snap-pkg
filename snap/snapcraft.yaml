@@ -1,5 +1,5 @@
 name: ros-realsense-d400
-version: '0.1.1'
+version: '0.1.2'
 summary: Realsense Camera D400 modified ros driver and realsense SDK Snap.
 description: |
   A snap package for modified realsense ros drivers packaged as an isolated snap mainly based on ros wrapper v2.0.3 and librealsense 2.10.3.
@@ -25,3 +25,4 @@ parts:
     rosdistro: kinetic
     catkin-ros-master-uri: http://localhost:11311
     catkin-packages: [librealsense2, realsense2_camera, ros_realsense_d400_snap_pkg] 
+    build-packages: [libglfw3-dev, libusb-1.0-0, build-essential, libgtk-3-dev]
