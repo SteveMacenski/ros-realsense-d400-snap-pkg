@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # if shouldn't use snap master branch
 if [ -z "$1" ]; then

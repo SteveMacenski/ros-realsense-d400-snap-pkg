@@ -10,6 +10,8 @@ Install via:
 sudo apt-get update && install snapcraft && snap install ros-realsense-d400 --devmode --edge
 ```
 
+## Usage 
+
 You can then run it in the isolated container using 
 
 ```
@@ -37,5 +39,8 @@ I can only imagine the other poor souls in agony with me so I decided to just pu
 - [ ] Change the flags for the branches wanting to update
 - [ ] Increment up version in the `snapcraft.yaml` file
 - [ ] Verify after CI that the new version is on edge
-- [ ] If its determined to be a stable release, manually add to the stable track
+
+## Quirk
+
+Since realsenses use the USB subsystem and I don't want to assume that everyone has their udevs set up correctly (I know its a problem for some people), I will not release to the stable track because it requires confinement that doesn't allow arbitrary access to the usb subsystem. There might be a work around but snapcraft is under development and I'll let it settle down before looking for it. For now, just use the edge track. 
  
