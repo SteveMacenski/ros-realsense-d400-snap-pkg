@@ -38,7 +38,8 @@ I can only imagine the other poor souls in agony with me so I decided to just pu
 
 - [ ] Change the flags for the branches wanting to update
 - [ ] Increment up version in the `snapcraft.yaml` file
-- [ ] Verify after CI that the new version is on edge
+- [ ] Push to master
+- [ ] After CI verify working then push to edge using `snapcraft list-revisions ros-realsense-d400` to look at revs, `sudo snap refresh ros-realsense-d400 --devmode` to refresh locally to test, and `snapcraft release ros-realsense-d400 [rev] edge` to release (should automated but its just at the end of TravisCI build time and I can't spend time to optimize today for a once in a quarter task.)
 
 ## Quirk
 
