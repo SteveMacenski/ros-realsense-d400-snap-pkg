@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # store locally variables from snapcraft
 serial_no=`snapctl get serialno`
