@@ -14,12 +14,3 @@ deploy:
            if [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] ; then 
              snapcraft push snap_ws/*.snap;
            fi"
-#  on:
-#    branch: master
-
-
-
-
-# release automation
-
-# unary error when snapctl returns empty

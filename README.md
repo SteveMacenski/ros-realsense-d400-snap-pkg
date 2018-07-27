@@ -1,13 +1,10 @@
-# Ubuntu Snaps of ROS Realsense and librealsense2 for the D4xx cameras [![Build Status](https://travis-ci.org/SteveMacenski/ros-realsense-d400-snap-pkg.png)](https://travis-ci.org/SteveMacenski/ros-realsense-d400-snap-pkg)
-
-## Snap store entry
-The snap can be found [here]().
+# Ubuntu Snaps of ROS Realsense and librealsense2 for the D4xx cameras
 
 ## Installation
 Install via:
 
 ```
-sudo apt-get update && install snapcraft && snap install ros-realsense-d400 --devmode --edge
+sudo apt-get update && install snapcraft && snap install ros-realsense-d400 --devmode --beta
 ```
 
 ## Usage 
@@ -15,7 +12,7 @@ sudo apt-get update && install snapcraft && snap install ros-realsense-d400 --de
 You can then run it in the isolated container using 
 
 ```
-snap set ros-realsense-d400 serialno=[serial] cameraid=[camera namespace] profile=[profile number]
+sudo snap set ros-realsense-d400 serialno=[serial] cameraid=[camera namespace] profile=[profile number]
 ros-realsense-d400
 ```
 
@@ -38,10 +35,12 @@ I can only imagine the other poor souls in agony with me so I decided to just pu
 
 - [ ] Change the flags for the branches wanting to update
 - [ ] Increment up version in the `snapcraft.yaml` file
-- [ ] Push to master
-- [ ] After CI verify working then push to edge using `snapcraft list-revisions ros-realsense-d400` to look at revs, `sudo snap refresh ros-realsense-d400 --devmode` to refresh locally to test, and `snapcraft release ros-realsense-d400 [rev] edge` to release (should automated but its just at the end of TravisCI build time and I can't spend time to optimize today for a once in a quarter task.)
+- [ ] Push to master and wait for CI to build
+- [ ] `snapcraft list-revisions ros-realsense-d400` to look at revs
+- [ ] `snapcraft release ros-realsense-d400 [rev] edge` to release to edge for testing
+- [ ] `sudo snap refresh ros-realsense-d400 --devmode --edge` to refresh locally to test
+- [ ] `snapcraft release ros-realsense-d400 [rev] beta` to release to wider stable production use.
 
 ## Quirk
 
-Since realsenses use the USB subsystem and I don't want to assume that everyone has their udevs set up correctly (I know its a problem for some people), I will not release to the stable track because it requires confinement that doesn't allow arbitrary access to the usb subsystem. There might be a work around but snapcraft is under development and I'll let it settle down before looking for it. For now, just use the edge track. 
- 
+Since realsenses use the USB subsystem and I don't want to assume that everyone has their udevs set up correctly (I know its a problem for some people), I will not release to the stable track because it requires confinement that doesn't allow arbitrary access to the usb subsystem. There might be a work around but snapcraft is under development and I'll let it settle down before looking for it. For now, just use the beta track. Edge is for my testing if you're feeling dangerous...
