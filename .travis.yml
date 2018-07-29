@@ -16,5 +16,5 @@ jobs:
     - stage: Release Snap
       script:  if [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] ; then 
                  snapcraft push snap_ws/*.snap --release edge;
-               fi"
+               fi
       skip_cleanup: true
