@@ -36,9 +36,7 @@ I can only imagine the other poor souls in agony with me so I decided to just pu
 - [ ] Change the flags for the branches wanting to update
 - [ ] Increment up version in the `snapcraft.yaml` file
 - [ ] Push to master and wait for CI to build
-- [ ] `snapcraft list-revisions ros-realsense-d400` to look at revs
-- [ ] `snapcraft release ros-realsense-d400 [rev] edge` to release to edge for testing
-- [ ] `sudo snap refresh ros-realsense-d400 --devmode --edge` to refresh locally to test
+- [ ] `sudo snap refresh ros-realsense-d400 --devmode --edge` refresh to test
 - [ ] `snapcraft release ros-realsense-d400 [rev] beta` to release to wider stable production use.
 
 ## Quirk
