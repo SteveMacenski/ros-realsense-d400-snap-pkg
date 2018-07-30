@@ -16,7 +16,7 @@ jobs:
     - stage: Release Snap
       script:  docker run -v $(pwd):$(pwd) -t snapcore/snapcraft sh -c
               "apt update -qq &&
-               cd $(pwd) &&
+               cd $(pwd) && ls && 
                snapcraft push --release edge snap_ws/*.snap"
       skip_cleanup: true
       on:
