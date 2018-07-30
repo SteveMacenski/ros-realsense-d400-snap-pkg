@@ -11,13 +11,16 @@ jobs:
       script: docker run -v $(pwd):$(pwd) -t snapcore/snapcraft sh -c
               "apt update -qq &&
                cd $(pwd) &&
-               ./generate_snap.sh"
+               ./generate_snap.sh &&
+               if [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] ; then 
+                 snapcraft push snap_ws/*.snap;
+               fi"
       skip_cleanup: true
-    - stage: Release Snap
-      script:  docker run -v $(pwd):$(pwd) -t snapcore/snapcraft sh -c
-              "apt update -qq &&
-               cd $(pwd) && ls && 
-               snapcraft push --release edge snap_ws/*.snap"
-      skip_cleanup: true
-      on:
-        branch: master # so no need for travis BRANCH/PULL_REQUEST logic
+    #- stage: Release Snap
+    #  script:  docker run -v $(pwd):$(pwd) -t snapcore/snapcraft sh -c
+    #          "apt update -qq &&
+    #           cd $(pwd) && ls && 
+    #           snapcraft push --release edge snap_ws/*.snap"
+    #  skip_cleanup: true
+    #  on:
+    #    branch: master # so no need for travis BRANCH/PULL_REQUEST logic
