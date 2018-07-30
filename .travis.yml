@@ -19,6 +19,6 @@ jobs:
                cd $(pwd) &&
                if [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ] ; then 
                  apt install snapcraft -y
-                 snapcraft push snap_ws/*.snap --release edge;
+                 snapcraft push --release edge snap_ws/*.snap;
                fi"
       skip_cleanup: true
