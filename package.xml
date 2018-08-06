@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>ros_realsense_d400_snap_pkg</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <description>The ros-realsense-d400-snap-pkg package</description>
   <maintainer email="stevenmacenski@gmail.com">steven macenski</maintainer>
   <license>LGPGL v2.1</license>
