@@ -4,7 +4,7 @@
 Install via:
 
 ```
-sudo apt-get update && install snapcraft && snap install ros-realsense-d400 --devmode --beta
+sudo apt-get update && sudo apt install snapcraft && snap install ros-realsense-d400 --devmode --beta
 ```
 
 ## Usage 
@@ -12,7 +12,7 @@ sudo apt-get update && install snapcraft && snap install ros-realsense-d400 --de
 You can then run it in the isolated container using 
 
 ```
-sudo snap set ros-realsense-d400 serialno=[serial] cameraid=[camera namespace] profile=[profile number]
+sudo snap set ros-realsense-d400 serialno=[serial] cameraid=[camera namespace] profile=[profile number] masterhostname=[IP address or hostname]
 ros-realsense-d400
 ```
 

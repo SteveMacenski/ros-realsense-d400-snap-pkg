@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# entry point from outside: snap set <snapname> serialno=foo cameraid=bar profile=profile1
+# entry point from outside: snap set <snapname> serialno=foo cameraid=bar profile=profile1 masterhostname=10.2.98.123
 
 # write to a config file that is readable from root and snap as debug for current state
 # SNAP_COMMON won't persist between versions of snap
@@ -24,6 +24,13 @@ if ! profile=$(snapctl get profile); then
     echo "profile=""" >> $SNAP_COMMON/configuration
 else
     echo "profile=$profile" >> $SNAP_COMMON/configuration
+fi
+
+if ! masterhostname=$(snapctl get masterhostname); then
+    echo "masterhostname is required"
+    echo "masterhostname=""" >> $SNAP_COMMON/configuration
+else
+    echo "masterhostname=$masterhostname" >> $SNAP_COMMON/configuration
 fi
 
 chmod 600 $SNAP_COMMON/configuration
