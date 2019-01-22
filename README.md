@@ -1,5 +1,8 @@
 # Ubuntu Snaps of ROS Realsense and librealsense2 for the D4xx cameras
  
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/ros-realsense-d400)
+
+
 ## Installation
 Install via:
 
