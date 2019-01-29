@@ -4,7 +4,7 @@ summary: Realsense Camera D400 modified ros driver and realsense SDK Snap.
 description: |
   A snap package for modified realsense ros drivers packaged as an isolated snap mainly based on ros wrapper v2.0.3 and librealsense 2.10.3.
 grade: stable
-confinement: strict
+confinement: classic
 
 type: app
 
