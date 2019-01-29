@@ -33,11 +33,11 @@ else
     echo "masterhostname=$masterhostname" >> $SNAP_COMMON/configuration
 fi
 
-if ! irone=$(snapctl get irone); then
-    echo "irone is required"
-    echo "irone=""" >> $SNAP_COMMON/configuration
+if ! iron=$(snapctl get iron); then
+    echo "iron is required"
+    echo "iron=""" >> $SNAP_COMMON/configuration
 else
-    echo "irone=$irone" >> $SNAP_COMMON/configuration
+    echo "iron=$iron" >> $SNAP_COMMON/configuration
 fi
 
 chmod 600 $SNAP_COMMON/configuration
