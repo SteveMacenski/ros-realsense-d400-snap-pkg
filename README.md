@@ -7,7 +7,7 @@
 Install via:
 
 ```
-sudo apt-get update && sudo apt install snapcraft && snap install ros-realsense-d400 --devmode --beta
+sudo apt-get update && sudo apt install snapcraft && snap install ros-realsense-d400
 ```
 
 ## Usage 
@@ -25,7 +25,7 @@ If the values are not set or some are set, it will run the default `rs_camera.la
 
 ```
 0 - default
-1 - 6 fps color/depth, no IR, downsampled to minimum (320x180/424x240)
+1 - 6 fps color/depth, no IR, downsampled to minimum (320x180/424x240), option for infra1
 ```
 
 ## Motive
@@ -43,7 +43,3 @@ I can only imagine the other poor souls in agony with me so I decided to just pu
 - [ ] `snapcraft release ros-realsense-d400 [rev] edge` to release to edge for testing
 - [ ] `sudo snap refresh ros-realsense-d400 --devmode --edge` refresh to test
 - [ ] `snapcraft release ros-realsense-d400 [rev] beta` to release to wider stable production use.
-
-## Quirk
-
-Since realsenses use the USB subsystem and I don't want to assume that everyone has their udevs set up correctly (I know its a problem for some people), I will not release to the stable track because it requires confinement that doesn't allow arbitrary access to the usb subsystem. There might be a work around but snapcraft is under development and I'll let it settle down before looking for it. For now, just use the beta track. Edge is for my testing if you're feeling dangerous...
