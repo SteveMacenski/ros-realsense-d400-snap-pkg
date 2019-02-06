@@ -18,7 +18,7 @@ apps:
     plugs: [network, network-bind]
 
   rs-enumerate-devices:
-    command: rs-enumerate-devices
+    command: rs-enumerate-devices -s
     plugs: [network, network-bind, raw-usb]
 
 parts:
