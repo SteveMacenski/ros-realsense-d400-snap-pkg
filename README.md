@@ -26,6 +26,7 @@ If the values are not set or some are set, it will run the default `rs_camera.la
 ```
 0 - default
 1 - 6 fps color/depth, optional IR @ depth resolution, downsampled to minimum (320x180/424x240)
+2 - 6 fps color/depth, optional IR @ all default resolutions
 ```
 
 ## Motive
